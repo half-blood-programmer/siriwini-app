@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeng/themes/lara-light-blue/theme.css";
+
+/* Core styles for all components */
+@import "primeng/resources/primeng.min.css";
+
+/* PrimeIcons (for pi-* icons) */
+@import "primeicons/primeicons.css";
+
+/* Optional utility classes (grid, flex, spacing) */
+@import "primeflex/primeflex.css";
