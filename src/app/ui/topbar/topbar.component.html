@@ -1,0 +1,16 @@
+<header class="topbar">
+  <button
+    pButton
+    type="button"
+    icon="pi pi-bars"
+    (click)="toggle()"
+    [attr.aria-expanded]="!state.collapsed()"
+    aria-label="Toggle sidebar"
+  ></button>
+
+  <h1 class="title">Learners</h1>
+
+  <span class="flex-gap"></span>
+
+  <!-- put user/avatar/actions here -->
+</header>

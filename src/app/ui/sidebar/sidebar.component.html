@@ -1,1 +1,26 @@
-<p>sidebar works!</p>
+<aside class="sidebar" [class.collapsed]="collapsed()">
+  <div class="brand">
+    <img src="assets/logo.svg" alt="Logo" class="logo" />
+    <span class="brand-text" *ngIf="!collapsed()">Trenning</span>
+  </div>
+
+  <nav class="nav">
+    <a
+      *ngFor="let item of items"
+      class="nav-item"
+      [routerLink]="item.route"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="
+        item.route === '/' ? { exact: true } : { exact: false }
+      "
+      pRipple
+      [pTooltip]="item.label"
+      [tooltipDisabled]="!collapsed()"
+      tooltipPosition="right"
+    >
+      <i class="pi" [ngClass]="item.icon"></i>
+      <span class="label" *ngIf="!collapsed()">{{ item.label }}</span>
+      <span class="spacer"></span>
+    </a>
+  </nav>
+</aside>

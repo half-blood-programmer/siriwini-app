@@ -1,0 +1,26 @@
+:host {
+  --sidebar-w: 240px;
+  --sidebar-w-collapsed: 72px;
+  display: block;
+}
+
+.layout {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  transition: grid-template-columns 0.2s ease;
+}
+
+:host(.sidebar-collapsed) .layout {
+  grid-template-columns: var(--sidebar-w-collapsed) 1fr;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.page {
+  padding: 16px;
+  background: var(--surface-50, #fafafa);
+}
